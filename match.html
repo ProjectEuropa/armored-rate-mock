@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Armored Core Inspired Website</title>
+  <style>
+    /* CSS styles embedded in HTML */
+    body {
+      background-color: #333333;
+      color: #c0c0c0;
+      font-family: "Courier New", monospace; /* モノスペースフォントでテクノロジー感を出す */
+    }
+    @keyframes textFlame {
+      0% {
+        text-shadow: 0 0 4px #ff0000, 0 0 14px #ff8000, 0 0 24px #ff8000, 0 0 44px #ff8000;
+      }
+      50% {
+        text-shadow: 0 0 8px #ff0000, 0 0 18px #ff4000, 0 0 28px #ff4000, 0 0 48px #ff4000;
+      }
+      100% {
+        text-shadow: 0 0 4px #ff0000, 0 0 14px #ff8000, 0 0 24px #ff8000, 0 0 44px #ff8000;
+      }
+    }
+
+    .catchphrase, .title {
+      animation: textFlame 1s infinite alternate;
+    }
+    header h1 {
+      font-size: 36px;
+      margin-bottom: 0.2em;
+    }
+
+    header p {
+      font-size: 24px;
+    }
+    .header-image-container {
+      background-image: url("./images/fire.jpeg");
+      background-size: cover;
+      background-position: center;
+      height: 500px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      color: white; /* キャッチコピーとタイトルのテキスト色 */
+    }
+
+    .catchphrase {
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+
+    .title {
+      font-size: 1.5em;
+    }
+
+    .header-image-container {
+      text-align: center; /* これで画像が中央になる */
+    }
+    header {
+      background-color: #333333;
+      padding: 1em;
+      text-align: center;
+    }
+
+    nav ul {
+      background-color: #444444;
+      overflow: hidden;
+      color: white;
+      display: flex;
+      justify-content: center;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      padding: 14px 16px;
+    }
+
+    nav ul li a {
+      color: #c0c0c0;
+      text-decoration: none;
+    }
+    main {
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.8);  /* 半透明の黒でテクノロジー感を出す */
+    }
+
+    .intro img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    footer {
+      background-color: #222222;
+      color: white;
+      text-align: center;
+      padding: 1em;
+    }
+
+    .matching-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .game-mode, .skill-level {
+      margin: 10px;
+    }
+
+    .matching-button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #666;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+
+    table {
+      width: 100%;
+      margin-top: 20px;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      border: 1px solid #555;
+      padding: 8px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #444;
+      color: white;
+    }
+
+    .challenge-button {
+      background-color: #333;  /* ダークな背景色 */
+      border: 1px solid #666;  /* ボーダーもダークに */
+      color: #ccc;  /* テキストは薄いグレー */
+      padding: 8px 16px;  /* パディング */
+      cursor: pointer;  /* ホバーしたときのカーソル形状 */
+      transition: background-color 0.3s ease;  /* 背景色のトランジション */
+    }
+
+    .challenge-button:hover {
+      background-color: #444;  /* ホバーしたときは少し明るく */
+    }
+
+    .online-players ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .online-players li {
+      padding: 10px;
+      background-color: rgba(255, 255, 255, 0.1);
+      margin: 5px;
+    }
+
+    .battle-card {
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 15px;
+      margin: 15px;
+      display: inline-block;
+      width: calc(50% - 30px);
+      box-sizing: border-box;
+    }
+
+    .battle-card h4, .battle-card p {
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+<div class="header-image-container">
+  <div class="catchphrase">世界中のレイヴンよ集え</div>
+  <div class="title">Armored Rate</div>
+</div>
+<header>
+  <h1>Armored Rate</h1>
+</header>
+<nav>
+  <ul>
+    <li><a href="./index.html">ホーム</a></li>
+    <li><a href="./match.html">フリー対戦</a></li>
+    <li><a href="./match.html">レーティング対戦</a></li>
+    <li><a href="./tournament.html">大会</a></li>
+    <li><a href="./ravens.html">歴戦レイヴン一覧</a></li>
+    <li><a href="./ravens.html">ランキング</a></li>
+  </ul>
+</nav>
+<main>
+  <section class="matching-section">
+    <h2>対戦マッチング</h2>
+
+    <div class="game-mode">
+      <label for="gameModeSelect">ゲームモード：</label>
+      <select id="gameModeSelect">
+        <option value="free">フリー対戦</option>
+        <option value="rating">レーティング対戦</option>
+        <option value="tournament">トーナメント</option>
+      </select>
+    </div>
+
+    <div class="skill-level">
+      <label for="skillLevelSelect">スキルレベル：</label>
+      <select id="skillLevelSelect">
+        <option value="beginner">初心者</option>
+        <option value="intermediate">中級者</option>
+        <option value="advanced">上級者</option>
+      </select>
+    </div>
+
+    <button class="matching-button">マッチング開始</button>
+  </section>
+
+  <section>
+    <h2>オンライン中のレイヴン一覧</h2>
+    <table>
+      <thead>
+      <tr>
+        <th>ユーザー名</th>
+        <th>レベル</th>
+        <th>AC名</th>
+        <th>アクション</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>Raven1</td>
+        <td>上級者</td>
+        <td>ACX-001</td>
+        <td><button class="challenge-button">対戦申し込み</button></td>
+      </tr>
+      <tr>
+        <td>Raven2</td>
+        <td>初心者</td>
+        <td>ACZ-002</td>
+        <td><button class="challenge-button">対戦申し込み</button></td>
+      </tr>
+      <!-- 他のレイヴンも同様に -->
+      </tbody>
+    </table>
+  </section>
+
+  <!-- 対戦中のプレイヤーリスト -->
+  <section>
+    <h2>対戦中のレイヴン</h2>
+    <div class="battle-card">
+      <h4>Raven1 vs Raven3</h4>
+      <p>モード: レーティング対戦</p>
+      <p>マップ: 都市</p>
+    </div>
+
+    <div class="battle-card">
+      <h4>Raven2 vs Raven4</h4>
+      <p>モード: フリー対戦</p>
+      <p>マップ: 砂漠</p>
+    </div>
+  </section>
+</main>
+<footer>
+  <p>Copyright Team Project Europa 2023. All Rights Reserved.</p>
+</footer>
+</body>
+</html>
